@@ -7,7 +7,9 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <div className="logo">Colours Print Media</div>
+        <Link to="/" className="logo">
+          <img src="/logo/logo.png" alt="Colours Print Media" />
+        </Link>
 
         <button
           className="menu-toggle"

@@ -239,3 +239,13 @@ section:nth-of-type(even) {
     border-bottom: 1px solid var(--border);
   }
 }
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 34px;
+  }
+}
