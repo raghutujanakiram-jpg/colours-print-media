@@ -198,3 +198,44 @@ section {
 section:nth-of-type(even) {
   background: #f8fafc;
 }
+.client-logo {
+  cursor: pointer;
+}
+
+.client-logo:hover img {
+  transform: scale(1.05);
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: none;
+    flex-direction: column;
+    border-top: 1px solid var(--border);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+}

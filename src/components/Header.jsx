@@ -1,18 +1,30 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="site-header">
       <div className="header-inner">
         <div className="logo">Colours Print Media</div>
-        <nav className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/mission-vision">Mission & Vision</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/clients">Clients</Link>
-          <Link to="/testimonials">Testimonials</Link>
-          <Link to="/contact">Contact</Link>
+
+        <button
+          className="menu-toggle"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+
+        <nav className={`nav ${open ? "open" : ""}`}>
+          <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+          <Link to="/about" onClick={() => setOpen(false)}>About</Link>
+          <Link to="/mission-vision" onClick={() => setOpen(false)}>Mission & Vision</Link>
+          <Link to="/services" onClick={() => setOpen(false)}>Services</Link>
+          <Link to="/clients" onClick={() => setOpen(false)}>Clients</Link>
+          <Link to="/testimonials" onClick={() => setOpen(false)}>Testimonials</Link>
+          <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
         </nav>
       </div>
     </header>
