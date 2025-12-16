@@ -1,39 +1,166 @@
 :root {
-  --ink-black: #0f172a;
-  --charcoal: #334155;
-  --white: #ffffff;
+  --ink: #0f172a;
+  --muted: #475569;
   --cyan: #06b6d4;
-  --magenta: #ec4899;
+  --bg: #ffffff;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   font-family: Inter, system-ui, sans-serif;
-  color: var(--ink-black);
-  background: var(--white);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
 }
 
+/* ---------- HEADER ---------- */
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav a {
+  margin-left: 1.25rem;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--cyan);
+}
+
+/* ---------- HERO ---------- */
+
 .hero {
-  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
   text-align: center;
 }
 
 .hero h1 {
-  font-family: Poppins, sans-serif;
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-button {
-  background: var(--cyan);
-  color: white;
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: var(--muted);
+}
+
+.cta button {
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 6px;
   border: none;
-  padding: 0.8rem 1.5rem;
-  margin: 0.5rem;
   cursor: pointer;
 }
 
-button.secondary {
+.cta button:first-child {
+  background: var(--cyan);
+  color: #fff;
+}
+
+.cta button.secondary {
   background: transparent;
   border: 1px solid var(--cyan);
   color: var(--cyan);
+}
+
+/* ---------- SECTIONS ---------- */
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-title p {
+  color: var(--muted);
+}
+
+/* ---------- GRID ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* ---------- TESTIMONIALS ---------- */
+
+.testimonial-card {
+  border-left: 4px solid var(--cyan);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: #f9fafb;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.contact-form button {
+  width: fit-content;
+  background: var(--cyan);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
