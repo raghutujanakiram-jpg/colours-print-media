@@ -1,11 +1,29 @@
 const clients = [
-  { name: "Syngenta", logo: "/clients/syngenta.png" },
-  { name: "Advanta", logo: "/clients/advanta.png" },
-  { name: "JK Seeds", logo: "/clients/jk-seeds.png" },
-  { name: "Siri Seeds", logo: "/clients/siri-seeds.png" },
-  { name: "Shakti Seeds", logo: "/clients/shakti-seeds.png" },
-  { name: "Needi Seeds", logo: "/clients/needi-seeds.png" },
-  { name: "GARC", logo: "/clients/garc.png" },
+  {
+    name: "Syngenta",
+    logo: "/clients/syngenta.png",
+    url: "https://www.syngenta.com/",
+  },
+  {
+    name: "Advanta Seeds",
+    logo: "/clients/advanta.png",
+    url: "https://www.advantaseeds.com/",
+  },
+  {
+    name: "JK Agri Genetics",
+    logo: "/clients/jk-seeds.png",
+    url: "https://jkagri.com/",
+  },
+  {
+    name: "Siri Seeds",
+    logo: "/clients/siri-seeds.png",
+    url: "https://www.siriseeds.com/",
+  },
+  {
+    name: "Nidhi Seeds",
+    logo: "/clients/needi-seeds.png",
+    url: "https://nidhiseed.com/",
+  },
 ];
 
 export default function ClientsGrid() {
@@ -13,14 +31,23 @@ export default function ClientsGrid() {
     <section>
       <div className="section-title">
         <h2>Trusted by Industry Leaders</h2>
-        <p>Long-term partnerships across agriculture, seeds, and enterprise brands.</p>
+        <p>
+          Long-term partnerships with globally recognized agricultural and seed brands.
+        </p>
       </div>
 
       <div className="clients-grid">
         {clients.map((c) => (
-          <div className="client-logo" key={c.name}>
+          <a
+            key={c.name}
+            href={c.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="client-logo"
+            aria-label={`Visit ${c.name} website`}
+          >
             <img src={c.logo} alt={c.name} />
-          </div>
+          </a>
         ))}
       </div>
     </section>
