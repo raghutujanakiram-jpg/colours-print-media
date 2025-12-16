@@ -1,12 +1,28 @@
 const services = [
-  "Creative Design & Artwork",
-  "Offset Printing",
-  "Digital Printing",
-  "Screen Printing",
-  "Flex & Large-Format Printing",
-  "Promotional Materials",
-  "Multi-Language Translation",
-  "Professional Typing Services",
+  {
+    title: "Creative Design & Artwork",
+    image: "/services/design.jpg",
+  },
+  {
+    title: "Offset Printing",
+    image: "/services/offset.jpg",
+  },
+  {
+    title: "Digital Printing",
+    image: "/services/digital.jpg",
+  },
+  {
+    title: "Screen Printing",
+    image: "/services/screen.jpg",
+  },
+  {
+    title: "Flex & Large-Format Printing",
+    image: "/services/flex.jpg",
+  },
+  {
+    title: "Promotional Materials",
+    image: "/services/promo.jpg",
+  },
 ];
 
 export default function ServicesGrid() {
@@ -14,13 +30,15 @@ export default function ServicesGrid() {
     <section>
       <div className="section-title">
         <h2>Our Services</h2>
-        <p>Complete print and promotional solutions under one roof.</p>
+        <p>End-to-end print and promotional execution.</p>
       </div>
+
       <div className="grid">
         {services.map((s) => (
-          <div className="card" key={s}>
-            <h3>{s}</h3>
-            <p>Reliable execution with commercial-grade quality.</p>
+          <div className="card" key={s.title}>
+            <img src={s.image} alt={s.title} style={{ width: "100%", borderRadius: "6px" }} />
+            <h3>{s.title}</h3>
+            <p>Commercial-grade quality with reliable delivery.</p>
           </div>
         ))}
       </div>
