@@ -9,10 +9,10 @@ export default function Testimonials() {
   return (
     <section className="testimonials">
       {testimonials.map((t, index) => (
-        <div key={index} className="testimonial-card">
-          <p>“{t.quote}”</p>
-          <span>— {t.author}</span>
-        </div>
+        <div className="testimonial-card">
+  <p>“Consistent quality and dependable delivery.”</p>
+  <strong>— Syngenta</strong>
+</div>
       ))}
     </section>
   );
