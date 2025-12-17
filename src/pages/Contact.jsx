@@ -47,3 +47,14 @@ export default function Contact() {
     </section>
   );
 }
+<div className="map-wrapper">
+  <iframe
+    title="Colours Print Media Location"
+    src="https://www.google.com/maps?q=Colours%20Print%20Media%20AC%20Guards%20Hyderabad&output=embed"
+    width="100%"
+    height="220"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+  ></iframe>
+</div>
