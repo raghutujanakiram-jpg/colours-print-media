@@ -4,6 +4,11 @@ import { useState } from "react";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
+  const toggleTheme = () => {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  };
+
   return (
     <header className="site-header">
       <div className="header-inner">
@@ -11,12 +16,12 @@ export default function Header() {
           <img src="/logo/logo.png" alt="Colours Print Media" />
         </Link>
 
-        <button
-          className="menu-toggle"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle navigation"
-        >
+        <button className="menu-toggle" onClick={() => setOpen(!open)}>
           ☰
+        </button>
+
+        <button className="theme-toggle" onClick={toggleTheme}>
+          🌙
         </button>
 
         <nav className={`nav ${open ? "open" : ""}`}>

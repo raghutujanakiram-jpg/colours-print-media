@@ -8,12 +8,11 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <SectionTitle
-        title="What We Do"
-        subtitle="Everything your brand needs — executed flawlessly."
-      />
+      <SectionTitle title="Our Services" subtitle="End-to-end print execution" />
       <ServicesGrid />
+      <SectionTitle title="Our Clients" />
       <ClientsGrid />
+      <SectionTitle title="Testimonials" />
       <Testimonials />
     </>
   );

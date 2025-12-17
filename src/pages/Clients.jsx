@@ -4,10 +4,7 @@ import ClientsGrid from "../components/ClientsGrid";
 export default function Clients() {
   return (
     <>
-      <SectionTitle
-        title="Our Clients"
-        subtitle="Trusted by leading brands across industries."
-      />
+      <SectionTitle title="Clients" />
       <ClientsGrid />
     </>
   );

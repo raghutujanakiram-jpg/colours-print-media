@@ -1,12 +1,12 @@
 export default function ContactForm() {
   return (
     <form className="contact-form">
-      <input type="text" placeholder="Name" required />
-      <input type="text" placeholder="Company" />
-      <input type="email" placeholder="Email" required />
-      <input type="tel" placeholder="Phone" />
+      <input placeholder="Name" required />
+      <input placeholder="Company" />
+      <input placeholder="Email" required />
+      <input placeholder="Phone" />
       <textarea placeholder="Your requirement" rows="4"></textarea>
-      <button type="submit">Submit Request</button>
+      <button type="submit">Submit</button>
     </form>
   );
 }
