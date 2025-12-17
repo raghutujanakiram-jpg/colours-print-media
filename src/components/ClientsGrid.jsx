@@ -1,9 +1,29 @@
 const clients = [
-  { name: "Syngenta", logo: "/clients/syngenta.png", url: "https://www.syngenta.com/" },
-  { name: "Advanta", logo: "/clients/advanta.png", url: "https://www.advantaseeds.com/" },
-  { name: "JK Agri Genetics", logo: "/clients/jk-seeds.png", url: "https://jkagri.com/" },
-  { name: "Siri Seeds", logo: "/clients/siri-seeds.png", url: "https://www.siriseeds.com/" },
-  { name: "Nidhi Seeds", logo: "/clients/needi-seeds.png", url: "https://nidhiseed.com/" },
+  {
+    name: "Syngenta",
+    logo: "/clients/syngenta.png",
+    url: "https://www.syngenta.com/",
+  },
+  {
+    name: "Advanta",
+    logo: "/clients/advanta.png",
+    url: "https://www.advantaseeds.com/",
+  },
+  {
+    name: "JK Agri Genetics",
+    logo: "/clients/jk-seeds.png",
+    url: "https://jkagri.com/",
+  },
+  {
+    name: "Siri Seeds",
+    logo: "/clients/siri-seeds.png",
+    url: "https://www.siriseeds.com/",
+  },
+  {
+    name: "Nidhi Seeds",
+    logo: "/clients/needi-seeds.png",
+    url: "https://nidhiseed.com/",
+  },
 ];
 
 export default function ClientsGrid() {
@@ -16,9 +36,9 @@ export default function ClientsGrid() {
             href={c.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="client-logo"
+            className="client-card"
           >
-            <img src={c.logo} alt={c.name} />
+            <img src={c.logo} alt={c.name} loading="lazy" />
           </a>
         ))}
       </div>

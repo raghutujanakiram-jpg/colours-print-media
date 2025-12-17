@@ -324,3 +324,46 @@ section {
 .grid {
   align-items: start;
 }
+/* ---------- CLIENTS VISUAL POLISH ---------- */
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.client-card {
+  background: linear-gradient(
+    180deg,
+    var(--surface),
+    var(--surface-soft)
+  );
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+}
+
+.client-card img {
+  max-width: 140px;
+  max-height: 70px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.85;
+}
+
+/* Hover = credibility cue */
+.client-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 40px rgba(34, 211, 238, 0.15);
+}
+
+.client-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
