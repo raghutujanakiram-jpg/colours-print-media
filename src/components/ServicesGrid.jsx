@@ -13,7 +13,11 @@ export default function ServicesGrid() {
       <div className="grid">
         {services.map((s) => (
           <div className="card" key={s.title}>
-            <img src={s.image} alt={s.title} />
+            {/* FIXED MEDIA CONTAINER */}
+            <div className="service-media">
+              <img src={s.image} alt={s.title} loading="lazy" />
+            </div>
+
             <h3>{s.title}</h3>
             <p>Commercial-grade quality with reliable delivery.</p>
           </div>
