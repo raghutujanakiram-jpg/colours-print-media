@@ -13,7 +13,7 @@ export default function Footer() {
   );
 }
 <a
-  href="https://wa.me/914066886333"
+  href="https://wa.me/919703014567"
   className="whatsapp-float"
   target="_blank"
   rel="noopener noreferrer"
